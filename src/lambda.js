@@ -286,7 +286,7 @@ function y_combinator(f) {
 }
 
 // Recurssion is based call_with_self with explicit self(self) calls.
-function factorial1(self) {
+function factorial_self(self) {
     return function (n) {
         // Extra indirection to avoid calling times under call-by-value
         return test(iszero(n))(function () { return c1; })(function () {
@@ -296,7 +296,7 @@ function factorial1(self) {
 }
 
 // Recurssion is based on y_combinator()
-function factorial2(recursion) {
+function factorial_y(recursion) {
     return function (n) {
         // Extra indirection to avoid calling times() etc.  under
         // eager evaluation.

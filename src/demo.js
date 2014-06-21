@@ -39,8 +39,8 @@ function demo() {
     rf.code('tail(nil)', 'list.num');
 
     rf.title('Recursion');
-    rf.code('call_with_self(factorial1)(times(c3)(c2))', 'num');
-    rf.code('y_combinator(factorial2)(c4)', 'num');
+    rf.code('call_with_self(factorial_self)(times(c3)(c2))', 'num');
+    rf.code('y_combinator(factorial_y)(c4)', 'num');
 
     rf.finish('outputPlace', evaluator);
 }
