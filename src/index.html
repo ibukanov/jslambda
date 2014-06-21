@@ -2,53 +2,14 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Test</title>
+  <title>jslambda test</title>
 </head>
 <body bgcolor='#FFFFD0'>
+This is an exercise to encode various mathematical objects using <a href="http://en.wikipedia.org/wiki/Lambda_calculus#Encoding_datatypes"></a>lambda calculus implemented using JavaScript. For readability the code in <a href="lambda.js">lambda.js</a> uses named functions and var statements to name intermediate results, but as the code never references things that are defined after it, all the names can be replaced by their definitions.  
+<hr>
 <div id='outputPlace'></div>
 <script src='lambda.js'></script>
-<script src='example.js'></script>
-<script>
-(function() {
-    var e = new Example();
-
-    e.title('Logic');
-    e.code('bool', 'test(tru)(tru)(fls)');
-    e.code('bool', 'and(tru)(or(fls)(not(tru)))');
-
-    e.title('Arithmetic - increasing');
-    e.code('num', 'c4');
-    e.code('num', 'plus(plus(c3)(c2))(c1)');
-    e.code('bool', 'iszero(times(c0)(c2))');
-    e.code('num', 'power(c3)(times(c2)(c3))');
-
-    e.title('Arithmetic - decreasing');
-    e.code('num', 'pred(c4)');
-    e.code('num', 'minus(power(c3)(c3))(c1)');
-    e.code('bool', 'numeq(c0)(c2)');
-    e.code('bool', 'numeq(c1)(minus(c3)(c2))');
-
-
-    e.title('List processing');
-    e.code('list.num', 'cons(c2)(cons(c1)(nil))');
-    e.code('bool', 'isnil(cons(tru)(nil))');
-    e.code('num', 'list3(c3)(c2)(c1)(plus)(c0)');
-    e.code('list.bool', 'head(cons(list2(tru)(fls))(nil))');
-    e.code('list.num', 'tail(list3(c1)(c2)(c3))');
-    e.code('list.num', 'tail(list3(c1)(c2)(c3))');
-    e.code('list.num', 'tail(nil)');
-
-//    e.title('Test');
-//    e.code('list.num', 'tail2(list3(c1)(c2)(c3))');
-//    e.code('list.num', 'tail2(tail2(list1(c3)))');
-
-    e.title('Recursion');
-    e.code('num', 'call_with_self(factorial1)(times(c3)(c2))');
-    e.code('num', 'y_combinator(factorial2)(c4)');
-
-    e.finish('outputPlace');
-
-}());
-</script>
+<script src='run_format.js'></script>
+<script src='demo.js'></script>
 </body>
 </html>

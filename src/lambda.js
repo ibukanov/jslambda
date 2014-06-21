@@ -72,8 +72,7 @@ function unbox(box) {
     return box(id);
 }
 
-// numbers
-
+// Church numbers
 
 var c0 = fls;
 
@@ -173,7 +172,6 @@ function numeq(m) {
 }
 
 // Lists
-
 
 var nil = fls;
 
@@ -308,7 +306,8 @@ function factorial2(recursion) {
     };
 }
 
-/////
+// Helper to show the results as string assuming the result is a
+// lambda of a particular kind.
 
 function lambda_to_str(kind, lambda) {
     function inc(x) {
